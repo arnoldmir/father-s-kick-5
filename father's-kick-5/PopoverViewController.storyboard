@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Popover View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="PopoverViewController" customModule="father_s_kick_5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fow-Ww-cQ7">
+                                <rect key="frame" x="85" y="67" width="130" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Jr8-E5-7OR"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="280 pt"/>
+                                    <segment title="150 pt"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControllValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Zgu-I8-iRd"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-Bl-xbl">
+                                <rect key="frame" x="260" y="67" width="32" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="cyX-sf-bR7"/>
+                                    <constraint firstAttribute="width" secondItem="UIH-Bl-xbl" secondAttribute="height" id="ymZ-Dh-U3v"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="P95-xH-pVW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Fow-Ww-cQ7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="Yt3-qL-7SU"/>
+                            <constraint firstItem="UIH-Bl-xbl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="lpB-YO-eVd"/>
+                            <constraint firstAttribute="trailing" secondItem="UIH-Bl-xbl" secondAttribute="trailing" constant="8" id="mL0-d2-97Y"/>
+                            <constraint firstItem="Fow-Ww-cQ7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xn4-fq-4gu"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="280"/>
+                    <connections>
+                        <outlet property="closeButton" destination="UIH-Bl-xbl" id="0zo-hQ-iP4"/>
+                        <outlet property="segmentedControll" destination="Fow-Ww-cQ7" id="zip-4b-rIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
